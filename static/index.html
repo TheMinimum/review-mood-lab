@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review Mood Lab</title><link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="eyebrow">MOVIE REVIEW / SENTIMENT LAB</div><h1>Review Mood <em>Lab</em></h1><p class="subtitle">영화 리뷰의 분위기를 빠르게 읽어보세요.</p></header>
+    <section class="card input-card">
+      <div class="section-head"><label for="review">영어 리뷰</label><button id="example" class="text-button">예시 불러오기 <span>↗</span></button></div>
+      <textarea id="review" maxlength="5000" placeholder="Paste an English movie review here..."></textarea>
+      <div class="input-foot"><span id="counter">0 / 5,000</span><button id="analyze" class="primary">분석하기 <span>→</span></button></div>
+      <div id="error" class="error" role="alert"></div>
+    </section>
+    <section id="result" class="card result-card hidden" aria-live="polite">
+      <div class="section-head"><div><div class="eyebrow">ANALYSIS RESULT</div><h2 id="label">—</h2></div><div id="score" class="score">—</div></div>
+      <div class="meter"><div id="meter-fill"></div></div><div class="scale"><span>NEGATIVE</span><span>NEUTRAL</span><span>POSITIVE</span></div>
+      <div class="breakdown"><div><span>긍정</span><b id="positive">—</b></div><div><span>중립</span><b id="neutral">—</b></div><div><span>부정</span><b id="negative">—</b></div></div>
+      <p class="estimate">ⓘ 결과는 VADER 기반 추정치입니다 · <span id="model">—</span></p>
+    </section>
+    <footer>Review Mood Lab · local analysis</footer>
+  </main><script src="/static/app.js"></script>
+</body></html>
